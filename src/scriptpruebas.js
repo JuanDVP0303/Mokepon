@@ -21,7 +21,7 @@ for(let i = 0; i < pokemonsImg.length; i++){
  let squirtle = new Mokepon({
   nombre:"Squirtle",
   foto:pokemonsImg[1],
-  vidas:5,
+  vida:5,
   tipo:"AGUA",
   fotoMapa:mapPokemonsImg[1],
 });
@@ -329,7 +329,7 @@ class Mokepon {
     this.ancho = ancho;
     this.alto = alto;
     (this.x = aleatorio(0, mapa.width - this.ancho)),
-      (this.y = aleatorio(0, mapa.height - this.alto));
+    (this.y = aleatorio(0, mapa.height - this.alto));
     this.mapaFoto = new Image();
     this.mapaFoto.src = fotoMapa;
 
@@ -398,7 +398,7 @@ function seleccionarMascotaJugador() {
 
 
     newMokeponesArray = mokepones.filter(mokepon => mokepon.nombre != tipoMascotaJugador.nombre)
-    mokeponesArrayRandom = newMokeponesArray.sort(() => Math.random - 0.5).slice(0,3)
+    mokeponesArrayRandom = newMokeponesArray.sort(() => Math.random() - 0.5).slice(0,3)
 
   if (jugar == 1) {
     // sectionMensajesss.style.display = "flex";
@@ -702,27 +702,16 @@ function iniciarMapa() {
 let mascotaEncontrada;
 
 function revisarColision(enemigo) {
-  const arribaEnemigo = enemigo.y;
-  const abajoEnemigo = enemigo.y + enemigo.alto;
-  const derechaEnemigo = enemigo.x + enemigo.ancho;
-  const izquierdaenemigo = enemigo.x;
+  const enemigoY = enemigo.y;
+  const enemigoX = enemigo.x;
 
-  const arribaMascota = tipoMascotaJugador.y;
-  const abajoMascota = tipoMascotaJugador.y + tipoMascotaJugador.alto;
-  const derechaMascota = tipoMascotaJugador.x + tipoMascotaJugador.ancho;
-  const izquierdaMascota = tipoMascotaJugador.x;
+  const mascotaY = tipoMascotaJugador.y;
+  const mascotaX = tipoMascotaJugador.x;
   if (
-    /*abajoMascota < arribaEnemigo ||
-    arribaMascota > abajoEnemigo ||
-    derechaMascota < izquierdaenemigo ||
-    izquierdaMascota > derechaEnemigo*/
-    
-    Math.floor(arribaMascota / 10) >= Math.floor(arribaEnemigo / 10) &&
-    Math.floor(arribaMascota / 10) <= Math.floor(arribaEnemigo / 10) + 4 &&
-    Math.floor(izquierdaMascota / 10) >= Math.floor(izquierdaenemigo / 10) &&
-    Math.floor(izquierdaMascota / 10) <= Math.floor(izquierdaenemigo / 10) + 4
-
-
+    Math.floor(mascotaY / 10) >= Math.floor(enemigoY / 10) &&
+    Math.floor(mascotaY / 10) <= Math.floor(enemigoY / 10) + 4 &&
+    Math.floor(mascotaX / 10) >= Math.floor(enemigoX / 10) &&
+    Math.floor(mascotaX / 10) <= Math.floor(enemigoX / 10) + 4
     ) {
   
     alert("Te haz encontrado con un " + enemigo.nombre + " salvaje");
