@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOKEPON</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="selMascota">
+        <h1 class="titulo">MOKEPON!</h1>
+        <h2>Elige a tu mascota</h2>
+
+        <div id="contenedorTarjetas" class="selector"></div>
+
+        <br />
+        <button id="boton-seleccionar">Elegir!</button>
+      </section>
+
+      <section id="verMapa">
+        <h1 class="canvasTitulo">¡Recorre el mapa con tu Mokepon!</h1>
+        <canvas id="mapa"></canvas>
+        <div class="movimiento">
+          <button
+            id="arriba"
+            class="botonesMovimientos"
+            ontouchstart="moverMokeponArriba()"
+            ontouchend="detenerMovimiento()"
+            onmouseup="detenerMovimiento()"
+            onmousedown="moverMokeponArriba()"
+          >
+            <span class="material-symbols-outlined"> arrow_upward </span>
+          </button>
+
+          <button
+            id="abajo"
+            class="botonesMovimientos"
+            ontouchstart="moverMokeponAbajo()"
+            ontouchend="detenerMovimiento()"
+            onmouseup="detenerMovimiento()"
+            onmousedown="moverMokeponAbajo()"
+          >
+            <span class="material-symbols-outlined"> arrow_downward </span>
+          </button>
+
+          <button
+            id="izquierda"
+            class="botonesMovimientos"
+            ontouchstart="moverMokeponIzquierda()"
+            ontouchend="detenerMovimiento()"
+            onmouseup="detenerMovimiento()"
+            onmousedown="moverMokeponIzquierda()"
+          >
+            <span class="material-symbols-outlined"> arrow_back </span>
+          </button>
+
+          <button
+            id="derecha"
+            class="botonesMovimientos"
+            ontouchstart="moverMokeponDerecha()"
+            ontouchend="detenerMovimiento()"
+            onmouseup="detenerMovimiento()"
+            onmousedown="moverMokeponDerecha()"
+          >
+            <span class="material-symbols-outlined"> arrow_forward </span>
+          </button>
+        </div>
+      </section>
+
+      <div class="selAtaqueContainer">
+        <section id="selAtaque">
+          <h1 class="titulo">MOKEPON!</h1>
+          <h2>¡Selecciona tus ataques!</h2>
+          <div id="contenedorAtaques"></div>
+          <div>
+            <br />
+          </div>
+          <section id="mensajes">
+            <p id="resultado">SELECCIONA TUS ATAQUES</p>
+          </section>
+          <div>
+            <section id="reiniciar">
+              <button id="boton-reiniciar">Volver a jugar</button>
+            </section>
+          </div>
+          <div class="mokepones">
+            <div class="resultados">
+              <div id="ataqueDelJugador">
+                <p>
+                  tu Mascota: <span id="mascotaJugador"></span> <br /><br />
+                  <span id="imgMascotaCombate"></span>
+                  Victorias:
+                  <span id="vidasJ">0</span>
+                  <span id="AtaquesJugador"></span>
+                </p>
+              </div>
+              <div id="ataqueDelEnemigo">
+                <p class="vidasEE">
+                  Mascota rival:
+                  <span id="mascotaEnemiga"> </span>
+                  <br /><br />
+                  <span id="imgMascotaCombateEnemiga"></span>
+                  Victorias:
+                  <span id="vidasE">0</span>
+                  <span id="AtaquesEnemigos"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="src/scriptpruebas.js"></script>
+
+  </body>
+</html>

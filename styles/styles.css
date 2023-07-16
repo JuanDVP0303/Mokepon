@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.material-symbols-outlined {
+  width: 40px;
+  height: 20px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+* {
+  font-family: "Press Start 2P", cursive;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://mokeponcompletojdvp.netlify.app/4db591ae76ad5c18c7bd498347684374.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#selMascota {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  justify-content: center;
+  /* border: groove 1px goldenrod;
+  border-radius: 10px; */
+  overflow: hidden;
+  align-items: center;
+}
+
+.titulo {
+  color: rgb(210, 231, 24);
+  font-size: 80px;
+  text-shadow: 3px 2px 2px rgb(45, 45, 206);
+  margin: 30px;
+  text-align: center;
+}
+
+#selMascota h2 {
+  color: white;
+  font-size: 1rem;
+  text-shadow: 3px 2px 2px rgb(45, 45, 206);
+}
+
+#boton-seleccionar {
+  color: white;
+  text-shadow: 3px 2px 2px black;
+
+  width: 200px;
+  height: 50px;
+  border: solid 1px black;
+  border-radius: 15px;
+  outline: none;
+  background: teal;
+  cursor: pointer;
+  transition: transform 0.3 ease-in-out;
+  text-align: center;
+  margin: 10px;
+}
+#boton-seleccionar:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 3px 2px 2px black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#selAtaque {
+  margin: 0;
+  position: relative;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  justify-content: space-evenly;
+  /* border: groove 1px goldenrod;
+  border-radius: 10px; */
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+}
+
+#selAtaque h2 {
+  color: white;
+  font-size: 1rem;
+  text-shadow: 3px 2px 2px rgb(45, 45, 206);
+}
+
+.mokepones {
+  font-size: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.imgMascotaCombate {
+  width: 100px;
+  height: 100px;
+}
+
+.fotos {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 0.5 ease-in-out;
+  border: 3px solid rgb(0, 26, 255);
+  border-radius: 10px;
+  background-color: rgb(22, 169, 120);
+  margin-top: 20px;
+}
+
+.fotos:hover {
+  background-color: rgb(218, 253, 241);
+  transform: translateY(-5px);
+}
+
+input:checked + label {
+  transform: translateY(-30px);
+}
+
+input {
+  display: none;
+  transition: transform 0.5 ease-in-out;
+}
+
+.input {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  cursor: pointer;
+  gap: 50px;
+  margin: 20px;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+}
+
+.selector label {
+  cursor: pointer;
+}
+
+#contenedorAtaques {
+  display: inline-block;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+#boton-fuego {
+  background-color: rgb(251, 31, 31);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: white;
+  text-shadow: 3px 2px 2px black;
+  border-color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+#boton-agua {
+  background-color: rgb(8, 77, 167);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: white;
+  text-shadow: 3px 2px 2px black;
+  border-color: rgb(0, 208, 255);
+  cursor: pointer;
+}
+
+#boton-planta {
+  background-color: rgb(28, 171, 52);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: white;
+  text-shadow: 3px 2px 2px black;
+  border-color: rgb(0, 255, 13);
+  cursor: pointer;
+}
+
+#mensajes {
+  display: flex;
+  justify-content: center;
+  width: 280px;
+  margin-top: 20px;
+  padding: 10px;
+  text-shadow: 2px 1px 1px white;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: rgb(234, 255, 0);
+  box-shadow: 3px 3px 2px black;
+}
+
+.resultados {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+#ataqueDelJugador {
+  width: 160px;
+  background-color: rgb(234, 255, 0);
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 3px 2px 2px black;
+}
+
+#ataqueDelEnemigo {
+  width: 160px;
+  background-color: rgb(234, 255, 0);
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 3px 2px 2px black;
+}
+
+#boton-reiniciar {
+  color: black;
+  border: none;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 5px 4px 4px black;
+}
+
+#verMapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvasTitulo {
+  color: rgb(210, 231, 24);
+  font-size: 40px;
+  text-shadow: 3px 2px 2px rgb(45, 45, 206);
+  margin: 30px;
+  text-align: center;
+}
+
+.movimiento {
+  width: 30px;
+  height: 20px;
+  margin-top: 60px;
+  display: grid;
+
+  place-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.botonesMovimiento {
+  background-color: aqua;
+}
+
+.movimiento #arriba {
+  grid-column: 2/3;
+}
+
+.movimiento #derecha {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.movimiento #abajo {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.movimiento #izquierda {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+@media screen and (max-width: 800px) {
+  
+  .movimiento{
+    display: 
+    grid;
+  }
+
+
+  
+
+  body {
+    background-image: none;
+    background-color: teal;
+    text-align: center;
+  }
+
+  .titulo {
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+  }
+
+  #selMascota {
+    width: 400px;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .selector {
+    display: grid;
+    grid-template-columns: 100px;
+    width: 200px;
+  }
+  .fotos {
+    width: 170px;
+    height: 170px;
+    flex-direction: column;
+    /* gap: 20px; */
+  }
+
+  input:checked + label {
+    transform: translateY(-15px);
+  }
+
+  #selAtaque {
+    width: 100vw;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .resultados {
+    /* bottom: -50px; */
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  .selAtaqueContainer {
+    margin: 0;
+  }
+}
+
+.movimiento {
+  width: 50px;
+  height: 40px;
+  margin-top: 60px;
+  display: none
+  ;
+
+  place-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+#boton-seleccionar {
+  margin-top: 40px;
+}
+
+.canvasTitulo {
+  color: rgb(210, 231, 24);
+  font-size: 20px;
+  text-shadow: 3px 2px 2px rgb(45, 45, 206);
+  margin: 15px;
+  text-align: center;
+}
+
+.material-symbols-outlined {
+  width: 55px;
+  height: 40px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
